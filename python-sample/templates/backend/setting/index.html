@@ -1,0 +1,15 @@
+{% extends 'layout/base.html' %}
+
+{% block breadcrumbs %}
+    {{ block.super }}
+    <h1 class="main-title float-left">Settings</h1>
+	<ol class="breadcrumb float-right">
+		<li class="breadcrumb-item"><a href="{% url 'backend:home' %}">Home</a></li>
+		<li class="breadcrumb-item active">Settings</li>
+	</ol>
+	<div class="clearfix"></div>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}

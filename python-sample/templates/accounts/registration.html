@@ -1,0 +1,45 @@
+
+{% extends 'layout/base.html' %}
+
+        {% block breadcrumbs %}
+          <li><a href="{% url 'accounts:registration' %}">Signup</a></li>
+        {% endblock %}
+
+{% block content %}
+
+	<!-- Middle Section-->		
+	<div class="background-grey">
+	<div class="registration-box">
+		<div class="login-content">
+			<h2>Welcome Back!</h2>
+			
+            <hr id="login-hr">
+			<div class="form-text">
+			<form method ='POST' action="">
+				<input type="text" name="email"   value={{request.form.username}} "Username"> <br>
+				<input type="password" name="password"  value={{request.form.password}}"Password"><br>
+				<input type="text" name="confirm"  value={{request.form.confirm}}"Confirm Password"><br>
+				<input type="text" name="first_name"  value={{request.form.first_name}}"First Name"><br>
+				<input type="text" name="last_name"  value={{request.form.last_name}}"Last Name"><br>
+				<input type="text" name="user_email"  value={{request.form.user_email}}"User Email"><br>
+				<input type="text" name="user_phone"  value={{request.form.user_phone}}"User Phone"><br>
+				<input type="text" name="street_address"  value={{request.form.street_address}}"Street Address"><br>			 
+			</div>
+			
+			<div class="checkbox">
+    			<label><input type="checkbox"> Remember me</label>
+ 			</div>
+			<div class="form-button">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+			</form> 
+		
+		    <div class="button-row form-button">
+				<a class="login-link">Forgot password?</a>
+				<a class="login-link" href="{% url 'accounts:login' %}">Already have account?</a>
+			</div>
+			
+		</div>
+	</div>	
+	</div>
+{% endblock %}
